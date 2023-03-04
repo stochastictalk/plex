@@ -1,4 +1,4 @@
-# Replace every appearance of 'boilerplate' with package name.
+# Replace every appearance of 'plex' with package name.
 
 [build-system]
 requires = [
@@ -16,15 +16,15 @@ where = ["src"]
 namespaces = true
 
 [tool.setuptools_scm]
-write_to = "src/boilerplate/_version.py"
+write_to = "src/plex/_version.py"
 
 [tool.ruff]
 line-length = 120
 
 [project]
-name = "package-boilerplate"
+name = "package-plex"
 dynamic = ["version"]
-description = "A boilerplate package."
+description = "A plex package."
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = [
