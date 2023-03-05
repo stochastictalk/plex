@@ -33,7 +33,8 @@ dependencies = [
     "pyaudio",
     "SpeechRecognition",
     "openai",
-    "python-dotenv"
+    "python-dotenv",
+    "pyttsx3"
 ]
 
 [project.optional-dependencies]
