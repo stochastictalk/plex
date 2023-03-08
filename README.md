@@ -29,6 +29,7 @@ python main.py
 
 * Stream response from API to tighten conversational loop.
 * Fine tune ASR such that input audio terminates appropriately.
+* Include additional voices.
 * Include standby mode.
 * Enable interruption.
 * Include voice clones.
