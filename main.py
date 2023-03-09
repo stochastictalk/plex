@@ -5,15 +5,21 @@ from dotenv import dotenv_values
 import openai
 import pyttsx3
 import re
+import sounddevice as sd
 import speech_recognition as sr
+import torch
+
 
 
 terminate_regex = re.compile(r"flex[^a-zA-Z0-9]+terminate", re.IGNORECASE)
+
 
 class SpeechInput:
 
     def __init__(self):
         self.recognizer = sr.Recognizer()
+        with sr.Microphone() as source:
+            self.recognizer.adjust_for_ambient_noise(source)
 
     def record(self) -> sr.AudioData:
         with sr.Microphone() as source:
@@ -29,7 +35,7 @@ class SpeechInput:
             print("Could not request results from Whisper")
 
 
-class SpeechOutput:
+class SpeechOutputOld:
 
     def __init__(self):
         self.engine = pyttsx3.init()
@@ -37,6 +43,28 @@ class SpeechOutput:
     def play(self, statement: str):
         self.engine.say(statement)
         self.engine.runAndWait()
+
+class SpeechOutput:
+
+    def __init__(self):
+        self.sample_rate = 48000
+        self.speaker = "en_0"
+        self.model, _ = torch.hub.load(
+            repo_or_dir="snakers4/silero-models",
+            model="silero_tts",
+            language="en",
+            speaker="v3_en"
+        )
+
+    def play(self, statement: str):
+        audio = self.model.apply_tts(
+            text=statement,
+            speaker=self.speaker,
+            sample_rate=self.sample_rate,
+        )
+
+        sd.play(audio.numpy(), self.sample_rate, blocking=True)
+
 
 class ConversationRole(Enum):
     USER = "user"

@@ -2,6 +2,7 @@
 
 A Python package for speech interaction with ChatGPT.
 
+
 ## Installation
 
 Installation has only been tested on Mac with Apple Silicon.
