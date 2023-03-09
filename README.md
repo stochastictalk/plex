@@ -5,7 +5,7 @@ A Python package for speech interaction with ChatGPT.
 
 ## Installation
 
-Installation has only been tested on Mac with Apple Silicon.
+Installation has only been tested on Mac with Apple silicon.
 
 Install system dependencies.
 
@@ -28,11 +28,10 @@ python main.py
 
 ## Feature Stack
 
+
+* Receive continuous stream of user audio input.
+* Include gaze-engaged user input.
 * Stream response from API to tighten conversational loop.
-* Fine tune ASR such that input audio terminates appropriately.
-* Include additional voices.
-* Include standby mode.
 * Enable interruption.
 * Include voice clones.
-* Include gaze-engaged user input.
 * Enable spontaneous questions.
