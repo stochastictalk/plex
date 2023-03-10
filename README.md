@@ -28,7 +28,6 @@ python main.py
 
 ## Feature Stack
 
-
 * Receive continuous stream of user audio input.
 * Include gaze-engaged user input.
 * Stream response from API to tighten conversational loop.
