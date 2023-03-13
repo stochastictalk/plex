@@ -1,6 +1,8 @@
 # 🤩 Plex
 
-A Python package for speech interaction with ChatGPT.
+⚠️ under construction ⚠️
+
+A Python package for gaze-engaged speech interaction with ChatGPT.
 
 
 ## Installation
