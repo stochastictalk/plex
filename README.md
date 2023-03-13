@@ -12,7 +12,7 @@ Installation has only been tested on Mac with Apple silicon.
 Install system dependencies.
 
 ```
-brew install ffmpeg portaudio
+brew install ffmpeg portaudio cmake
 ```
 
 Install package.

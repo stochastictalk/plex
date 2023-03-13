@@ -22,7 +22,7 @@ write_to = "src/plex/_version.py"
 line-length = 120
 
 [project]
-name = "package-plex"
+name = "plex"
 dynamic = ["version"]
 description = "A plex package."
 readme = "README.md"
@@ -34,7 +34,10 @@ dependencies = [
     "SpeechRecognition",
     "openai",
     "python-dotenv",
-    "pyttsx3"
+    "pyttsx3",
+    "numpy",
+    "opencv_python",
+    "dlib"
 ]
 
 [project.optional-dependencies]
