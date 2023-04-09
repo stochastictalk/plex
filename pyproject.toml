@@ -35,9 +35,9 @@ dependencies = [
     "openai",
     "python-dotenv",
     "pyttsx3",
-    "numpy",
-    "opencv_python",
-    "dlib"
+    "numpy"
+    "sounddevice",
+    "omegaconf"
 ]
 
 [project.optional-dependencies]
